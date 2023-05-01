@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html{
   font-size: 62.5%; /* x/100 *16px =10px so x=62.5 %   now we set the root font size to 10 px  */
@@ -89,6 +91,9 @@ h2{
   font-size: 1.6rem;
   padding:1rem 0;
 }
+input,
+select,
+textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -103,11 +108,15 @@ button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
-button.primary {
-  background-color: #f0c040;
-}
+
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f0c040;
 }
 
 button.block {

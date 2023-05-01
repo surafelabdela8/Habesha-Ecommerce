@@ -4,6 +4,8 @@ import React from 'react';
 import {BrowserRouter,Route,  Routes} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen'
+import CartScreen from './screens/CartScreen';
+import Newproduct from './pages/Newproduct';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <main>
    
           <Routes>
+          <Route path='newproduct' element={<Newproduct/>}></Route>
+          <Route path="/cart/:id?" Component={CartScreen}></Route>
           <Route path="/Products/:id" element={<ProductScreen></ProductScreen>}></Route>
            <Route path="/" element={<HomeScreen></HomeScreen>} ></Route>
           </Routes>
