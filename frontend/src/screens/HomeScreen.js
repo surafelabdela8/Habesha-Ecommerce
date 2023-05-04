@@ -20,10 +20,10 @@ const HomeScreen = () => {
 
 
 useEffect(()=>{
-  dispatch(listProduct()) //listproduct is an action that is found in the action folder 
+  dispatch(listProduct()) //listproduct is an action that is found in the action folder so we are dispatching or sending the action to the store
 
 
-},[]);
+},[dispatch]);
 
 
   return (

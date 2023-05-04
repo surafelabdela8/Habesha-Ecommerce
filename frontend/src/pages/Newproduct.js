@@ -2,9 +2,9 @@ import React from 'react'
 import {BsCloudUpload} from "react-icons/bs"
 import { ImagetoBase64 } from '../utility/ImagetoBase64'
 import { useState } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-// import toast  from "react-hot-toast"
+
 
 const Newproduct = () => {
 const navigator=useNavigate;
@@ -48,7 +48,7 @@ console.log(data)
 
 const {name,category,image,price}=data
 if(name&&category&&image&&price){
-  const fetchdata=await fetch('http://127.0.0.1:5000/uploadproduct',{ method : "POST",
+  const fetchdata=await axios.post('http://127.0.0.1:5000/uploadproduct',{method:'post',
 headers : {
   "content-type" : "application/json"
 },
